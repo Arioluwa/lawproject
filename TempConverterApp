@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href= "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <h2 class="container center-align grey pink-text"> Temperature Converter</h2>
+    <div class="container">
+        <input type="number" placeholder="Enter Temperature (F)" oninput="farenheit2celsius(this.value)">
+        <!--<div class="btn">Convert</div>-->
+        <h4 id="celsius-value"></h4>
+
+        <input type="number" placeholder="Enter Temperature (C)" oninput="celsius2farenheit(this.value)">
+        <!--<div class="btn">Convert</div>-->
+        <h4 id="farenheit-value"></h4>
+    </div>
+
+    
+    
+     <script>
+     var farenheit2celsius = function (farenheit) {
+     var celsius = Math.round ((farenheit-32) * 0.6);
+     //console.log(celsius + "C");
+     document.getElementById("celsius-value").innerHTML=(celsius + "C")
+}
+//farenheit2celsius (20);
+
+var celsius2farenheit = function (celsius){
+    var farenheit = Math.round ((celsius *1.8) + 32);
+    //console.log(farenheit + "F");
+    document.getElementById("farenheit-value").innerHTML=(farenheit +"F")
+}
+//celsius2farenheit (20); 
+     </script>
+
+    <script src="assets/js/first.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
